@@ -1,0 +1,1 @@
+# Novu_Echo-Nuxt-VueEmail-Example
