@@ -40,7 +40,7 @@ bun run dev
 
 ## Launch The Dev Studio
 
-You can learn more about it [here](https://docs.novu.co/echo/concepts/studio)
+You can learn more about it [here](https://docs.novu.co/framework/concepts/studio)
 
 ```bash
 

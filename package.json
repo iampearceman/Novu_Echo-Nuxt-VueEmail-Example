@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@novu/echo": "^0.0.1-alpha.27",
+    "@novu/framework": "latest",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
     "vue-email": "^0.8.11",

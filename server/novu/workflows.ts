@@ -1,5 +1,5 @@
 import { config } from '@vue-email/compiler';
-import { Echo } from '@novu/echo';
+import { Client, workflow } from '@novu/framework';
 
 // Initialize the vueEmail with configuration
 const vueEmail = config('templates', {
@@ -8,14 +8,14 @@ const vueEmail = config('templates', {
     },
 })
 
-export const echo = new Echo({
+export const client = new Client({
     // The API key for the Novu API
     apiKey: process.env.NOVU_API_KEY,
     
-    devModeBypassAuthentication: true, // Note: Set this to false in production
+    strictAuthentication: process.env.NODE_ENV !== 'development', // Note: Set this to true in production
 });
 
-echo.workflow('hello-world', async ({ step, payload }) => {
+export const emailWorkflow = workflow('hello-world', async ({ step, payload }) => {
     await step.email(
         'send-email',
         async () => {
